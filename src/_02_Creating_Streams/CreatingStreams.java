@@ -2,6 +2,7 @@ package _02_Creating_Streams;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Stack;
 import java.util.stream.Stream;
@@ -10,6 +11,13 @@ public class CreatingStreams {
 	public static void main(String[] args) {
 		//1. Create a stream out of the following collections.
 		String[] strArr = {"one", "two", "three", "four"};
+		
+		//ASK FOR HELP ON WHAT STREAMS ARE
+		
+		Stream<String> stream = Arrays.stream(strArr);
+		stream.forEach(str -> System.out.println(str));
+		strArr[0] = "adfajd";
+		stream.forEach(str -> System.out.println(str));
 		
 		ArrayList<Integer> intList = new ArrayList<Integer>();
 		intList.add(1);

@@ -38,11 +38,39 @@ public class LambdaMethods {
 			
 		}, "capitalization");
 		//4. Call the printCustonMessage method using a lambda so that the String prints with a period in between each character.
-		//YOU LEFT OFF HERE *********
+		printCustomMessage((s)-> {
+			String newString = "";
+			for(int i =0; i<s.length(); i++){
+				if(i != 0){
+					newString += ".";
+					newString += s.charAt(i);
+				}
+				else{
+					newString += s.charAt(i);
+				}
+				//System.out.println(newString);
+			}
+			
+			System.out.println(newString);
+			
+		}, "period");
 		
 		
 		//5. Call the printCustonMessage method using a lambda so that the String prints without any vowels.
-	
+		printCustomMessage((s) -> {
+			String newString = "";
+			for(int i =0; i<s.length(); i++){
+				if(s.charAt(i) != 'a' && s.charAt(i) != 'A' && s.charAt(i) != 'e' && s.charAt(i) != 'E' && s.charAt(i) != 'i' && s.charAt(i) != 'I' && s.charAt(i) != 'o' && s.charAt(i) != 'O' && s.charAt(i) != 'u' && s.charAt(i) != 'U'){
+					newString += s.charAt(i);
+				}
+				
+				
+			}
+			System.out.println(newString);
+		
+		}, "vowels");
+		
+		
 	}
 	
 	public static void printCustomMessage(SpecialPrinter sp, String value) {
