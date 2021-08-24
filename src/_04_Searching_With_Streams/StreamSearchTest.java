@@ -1,12 +1,12 @@
 package _04_Searching_With_Streams;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class StreamSearchTest {
+public class StreamSearchTest {
 	@Test
-	void test1() {
+	public void test1() {
 		String[] strArr = {
 			"one", "two", "two",
 			"three", "three", "three",
